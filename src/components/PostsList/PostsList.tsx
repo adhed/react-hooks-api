@@ -5,7 +5,6 @@ import { IPost } from '../../models';
 import Post from '../Post/Post';
 import { Loading } from '../Loading';
 import useDebounce from '../../hooks/debounce';
-import { CounterLabel } from '../CounterLabel';
 import ErrorMsg from '../ErrorMsg/ErrorMsg';
 
 export interface PostsListProps {
@@ -45,7 +44,6 @@ const PostsList: React.FC<PostsListProps> = (props: PostsListProps) => {
   
     error ? <ErrorMsg msg="error" /> : 
     <div>
-      <CounterLabel number={debouncedPostsNumber}/>
         <div className="list">
           {posts.map((post: IPost) => {
             return <Post key={post.ID} data={post} loadComments={props.areCommentsEnabled}></Post>

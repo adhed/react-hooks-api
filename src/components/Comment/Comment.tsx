@@ -2,6 +2,8 @@ import React from 'react';
 import { IComment } from '../../models/comment';
 import { formatDate } from '../../utils';
 
+import './Comment.scss';
+
 export interface CommentProps {
     data: IComment;
 }

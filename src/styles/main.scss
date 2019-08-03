@@ -1,0 +1,12 @@
+body {
+    font: 14px Arial;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+

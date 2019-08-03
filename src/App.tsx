@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { PostsList } from './components';
-import './App.css';
 import { DEFAULT_NUMBER_OF_POSTS } from './constants';
 import Controls from './components/Controls/Controls';
+
+import './App.scss';
 
 const App: React.FC = () => {
 
@@ -20,8 +21,7 @@ const App: React.FC = () => {
 
   return (
     <div className="container">
-      <Controls areCommentsEnabled={areCommentsEnabled} postsNumber={postsNumber} onInputChange={handleInputChange} onLoadCommentsClick={handleLoadCommentsClick}/>
-      
+      <Controls areCommentsEnabled={areCommentsEnabled} postsNumber={postsNumber} onInputChange={handleInputChange} onLoadCommentsClick={handleLoadCommentsClick} />
       <PostsList postsToShow={postsNumber} areCommentsEnabled={areCommentsEnabled} />
     </div>
   );

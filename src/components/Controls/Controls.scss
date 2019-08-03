@@ -1,0 +1,39 @@
+@import '../../styles/colors.scss';
+
+.form {
+    background: $medium-blue;
+    border: 2px solid $dark-blue;
+    display: flex;
+    height: 50px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+}
+
+.form__label {
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    margin: auto 0.5rem auto 0;
+    text-transform: uppercase;
+}
+
+.form__input {
+    width: 40px;
+    background: transparent;
+    border: 1px solid $dark-blue;
+    height: 30px;
+    margin: auto 0;
+
+    &:hover {
+        border: 1px solid $rich-black;
+    }
+}
+
+.form__comments-button {
+    margin-left: auto;
+    width: 30%;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

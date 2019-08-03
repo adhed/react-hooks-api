@@ -1,6 +1,8 @@
 import React, { SyntheticEvent, ChangeEvent } from 'react';
 import { DEFAULT_NUMBER_OF_POSTS, MAX_NUMBER_OF_POSTS } from '../../constants';
 
+import './Controls.scss'
+
 interface ControlsProps {
     areCommentsEnabled: boolean;
     postsNumber: number;
@@ -21,15 +23,16 @@ const Controls: React.FC<ControlsProps> = (props: ControlsProps) => {
     const handleFormSubmit = (event: SyntheticEvent): void => {
         event.preventDefault();
     }
-
-  return (
-    <form className="form" onSubmit={handleFormSubmit}>
-        <input type="number" min={DEFAULT_NUMBER_OF_POSTS} max={MAX_NUMBER_OF_POSTS} value={props.postsNumber} name="counter" placeholder="Limit of posts" onChange={handleInputChange} className="form__input" />
-        <button className="form__comments-button" onClick={handleLoadCommentsClick}>
-        { props.areCommentsEnabled ? 'Hide comments' : 'Load comments' }
-        </button>
-    </form>
-  );
+    
+    return (
+        <form className="form" onSubmit={handleFormSubmit}>
+            <label className="form__label" htmlFor="counter">Limit of posts: </label>
+            <input autoFocus type="number" min={1} max={MAX_NUMBER_OF_POSTS} value={props.postsNumber} name="counter" placeholder="Limit of posts" onChange={handleInputChange} className="form__input" />
+            <button className="form__comments-button" onClick={handleLoadCommentsClick}>
+            { props.areCommentsEnabled ? 'Hide comments' : 'Load comments' }
+            </button>
+        </form>
+    );
 }
 
 export default Controls;

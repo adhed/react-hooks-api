@@ -1,0 +1,47 @@
+@import '../../styles/colors.scss';
+
+.post {
+    border: 2px solid $rich-black;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    background: $medium-blue;
+    border-radius: 2rem;
+    padding: 1rem;
+    transition: height 0.3s ease-in-out;
+}
+
+.post__more-link {
+    color: $medium-blue;
+    margin-left: auto;
+    margin-right: 0.5rem;
+}
+
+.post__headline {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.post__author {
+    font-weight: 400;
+}
+
+.post__date {
+    display: inline;
+    font-style: italic;
+    margin-left: 0.25rem;
+}
+
+.post__description {
+    display: flex;
+    margin-bottom: 0.75rem;
+}
+
+.comments__headline {
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 0.25rem;
+    border-bottom: 2px solid $dark-blue;
+    padding-right: 3rem;
+}

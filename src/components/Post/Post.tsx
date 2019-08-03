@@ -7,6 +7,8 @@ import { IComment } from '../../models/comment';
 import { Comment } from '../Comment';
 import { Loading } from '../Loading';
 
+import './Post.scss';
+
 export interface PostProps {
     data: IPost;
     loadComments: boolean;
@@ -37,8 +39,10 @@ const Post: React.FC<PostProps> = (props: PostProps) => {
   return (
     <div className="post">
         <h2 className="post__headline">{ props.data.title }</h2>
-        <span className="post__author">{ props.data.author.name }</span>
-        <span className="post__date">{ formatDate(props.data.date) }</span>
+        <span className="post__description">
+            <span className="post__author">{ props.data.author.name }</span>
+            <span className="post__date"> on { formatDate(props.data.date) }</span>
+        </span>
 
         <div className="post__excerpt" dangerouslySetInnerHTML={{__html: props.data.excerpt}}></div>
         <a className="post__more-link" href={props.data.URL} target="_blank">read more</a>
