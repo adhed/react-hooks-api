@@ -1,13 +1,29 @@
 
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import { PostsService } from '../../services';
+import { IPost } from '../../models';
+import Post from '../Post/Post';
 
-const List: React.FC = () => {
+export interface PostsListProps {
+  postsToShow: number;
+}
+
+const PostsList: React.FC<PostsListProps> = (props: PostsListProps) => {
+
+  const [posts, setPosts] = useState<IPost[]>([]);
+
+  useEffect(() => {
+    PostsService.getPosts(props.postsToShow)
+      .then((newPosts: IPost[]) => setPosts(newPosts));
+  }, [props.postsToShow]);
+
   return (
     <div className="list">
+      {posts.map((post: IPost) => {
+        return <Post key={post.ID} data={post}></Post>
+      })}
     </div>
   );
 }
 
-export default List;
+export default PostsList;

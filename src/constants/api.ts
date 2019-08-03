@@ -1,1 +1,1 @@
-export const API_URL: string = "https://public-api.wordpress.com/rest/v1.1/";
+export const API_URL: string = "https://public-api.wordpress.com/rest/v1.1";

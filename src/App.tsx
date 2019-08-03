@@ -1,5 +1,5 @@
 import React, { SyntheticEvent, ChangeEvent, useState } from 'react';
-import logo from './logo.svg';
+import { PostsList } from './components';
 import './App.css';
 
 const App: React.FC = () => {
@@ -22,7 +22,7 @@ const App: React.FC = () => {
         <button type="submit">Load posts!</button>
       </form>
 
-      <span>Number of posts to fetch: { postsNumber }</span>
+      <PostsList postsToShow={postsNumber} />
     </div>
   );
 }
