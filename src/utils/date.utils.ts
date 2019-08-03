@@ -1,3 +1,7 @@
 export const formatDate = (date: string): string => {
-    return new Date(date).toLocaleDateString('en-US');
+    if (date) {
+        return new Date(date).toLocaleDateString('en-US');
+    }
+
+    return 'Wrong date';
 }
