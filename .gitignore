@@ -8,8 +8,7 @@
 # testing
 /coverage
 
-# production
-/build
+# production removed for gh-pages
 
 # misc
 .DS_Store
