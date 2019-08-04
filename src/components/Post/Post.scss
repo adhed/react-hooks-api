@@ -7,15 +7,22 @@
     display: flex;
     flex-direction: column;
     background: $medium-blue;
-    border-radius: 2rem;
     padding: 1rem;
     transition: height 0.3s ease-in-out;
 }
 
 .post__more-link {
-    color: $medium-blue;
+    background: $dark-blue;
+    border-radius: 8px;
+    padding: 0.25rem;
+    color: white;
+    opacity: 0.5;
     margin-left: auto;
     margin-right: 0.5rem;
+
+    &:hover {
+        opacity: 0.75;
+    }
 }
 
 .post__headline {
