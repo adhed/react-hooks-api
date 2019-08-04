@@ -37,13 +37,16 @@ const PostsList: React.FC<PostsListProps> = (props: PostsListProps) => {
           setError(`There's an error with the request. Type another number.`);
           setIsLoading(false);
         });
+    } else if (debouncedPostsNumber === 0) {
+      setIsLoading(false);
+      setError(`Posts limit should be greater than 0.`);
     }
   }, [debouncedPostsNumber, props.postsToShow]);
 
   return (
     isLoading ? <Loading /> :
   
-    error ? <ErrorMsg msg="error" /> : 
+    error ? <ErrorMsg msg={error} /> : 
     <div>
         <div className="list">
           {posts.map((post: IPost) => {
