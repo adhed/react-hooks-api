@@ -27,6 +27,7 @@ const PostsList: React.FC<PostsListProps> = (props: PostsListProps) => {
   useEffect(() => {
     if (debouncedPostsNumber) {
       setIsLoading(true);
+    
       PostsService.getPosts(props.postsToShow)
         .then((newPosts: IPost[]) => {
           setPosts(newPosts);
@@ -37,7 +38,7 @@ const PostsList: React.FC<PostsListProps> = (props: PostsListProps) => {
           setIsLoading(false);
         });
     }
-  }, [debouncedPostsNumber]);
+  }, [debouncedPostsNumber, props.postsToShow]);
 
   return (
     isLoading ? <Loading /> :

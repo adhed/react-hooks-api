@@ -1,5 +1,5 @@
 import React, { SyntheticEvent, ChangeEvent } from 'react';
-import { DEFAULT_NUMBER_OF_POSTS, MAX_NUMBER_OF_POSTS } from '../../constants';
+import { MAX_NUMBER_OF_POSTS } from '../../constants';
 
 import './Controls.scss'
 

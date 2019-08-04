@@ -34,7 +34,7 @@ const Post: React.FC<PostProps> = (props: PostProps) => {
             setIsLoading(false);
         }
 
-    }, [props.loadComments]);
+    }, [props.loadComments, props.data.ID]);
 
   return (
     <div className="post">
@@ -45,7 +45,7 @@ const Post: React.FC<PostProps> = (props: PostProps) => {
         </span>
 
         <div className="post__excerpt" dangerouslySetInnerHTML={{__html: props.data.excerpt}}></div>
-        <a className="post__more-link" href={props.data.URL} target="_blank">read more</a>
+        <a className="post__more-link" href={props.data.URL} rel="noopener noreferrer" target="_blank">read more</a>
         
         { isLoading ? <Loading /> : <div className="comments">
             { comments.length ? <span className="comments__headline">Comments to this post:</span> : null }
