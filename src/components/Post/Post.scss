@@ -6,9 +6,10 @@
     padding-bottom: 0.5rem;
     display: flex;
     flex-direction: column;
-    background: $medium-blue;
+    background: $medium-background-gray;
     padding: 1rem;
     transition: height 0.3s ease-in-out;
+    box-shadow: 3px 3px 5px 6px $medium-background-gray;
 }
 
 .post__more-link {
