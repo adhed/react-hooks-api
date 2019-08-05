@@ -24,4 +24,4 @@ Bootstraped with [Create React App](https://github.com/facebook/create-react-app
 
 ## Demo
 
-Visit 'https://adhed.github.io/react-hooks-api/build/'
+Visit https://adhed.github.io/react-hooks-api/build/
